@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Our Services";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@model IEnumerable<CelilCavus.Energym.Models.DataObjectModel.ServiceDto.ServiceDtoList>
+<div class="heading_container">
+    <h2>
+        @ViewBag.Title
+    </h2>
+</div>
+
+<section class="service_section layout_padding">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="service_container">
+                <div class="box">
+                    <img src="~/Content/images/@item.ServiesImage" alt="">
+                    <h6 class="visible_heading">
+                        @item.ServiesTitle
+                    </h6>
+                    <div class="link_box">
+                        <a href="">
+                            <img src="~/Content/images/link.png" alt="">
+                        </a>
+                        <h6>
+                            @item.ServiesTitle
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>

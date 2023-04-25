@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@model CelilCavus.Energym.Models.DataObjectModel.AboutDto.AboutListDto
+    
+<div class="heading_container">
+    <h2>
+        @Model.AboutTitle
+    </h2>
+</div>
+<div class="box">
+    <div class="img-box">
+        <img src="~/Content/images/@Model.AboutIcon" alt="">
+    </div>
+    <div class="detail-box">
+        <p>
+           @Model.AboutDescription
+        </p>
+        <a href="">
+            Read More
+        </a>
+    </div>
+</div>
+
